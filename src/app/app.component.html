@@ -3,6 +3,7 @@
   <label for="last-time">Last time at:</label>
   <input type="time" id="last-time" [(ngModel)]="lastTime" (change)="evaluateIfItIsTime()" name="last-time">
 </form>
+<p>Last ate at {{lastTime}}</p>
 <ng-container *ngIf="!lastTime"><h2>Don't know</h2></ng-container>
 <ng-container *ngIf="lastTime && isTime"><h2>It is time</h2></ng-container>
 <ng-container *ngIf="lastTime && !isTime"><h2>It is not time yet</h2></ng-container>
