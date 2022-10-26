@@ -28,4 +28,16 @@ export class AppComponent {
 
     return date;
   }
+
+  ateNow() {
+    this.lastTime = this.timeNow()
+  }
+
+  private timeNow() {
+    return new Date().toLocaleTimeString(navigator.language,
+      {
+        hour: "2-digit",
+        minute: "2-digit"
+      })
+  }
 }
